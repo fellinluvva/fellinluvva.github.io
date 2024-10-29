@@ -1,0 +1,241 @@
+/* General Styles */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: #dddddd; /* grey */
+    background-color: #202020; /* black */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    background-color: #202020 !important; /* black */
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.6em;
+    font-weight: 400;
+    margin: 0px;
+}
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #202020 !important; /* black */
+    min-height: 20px !important;
+}
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.navbar-nav .nav-link {
+    color: #dddddd !important; /* grey */
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #222 !important; /* black? */
+    color: #F60 !important; /* orange */
+}
+
+.container {
+    text-align: center;
+    max-width: 960px;
+    margin: auto;
+}
+
+.accordion-body{
+    background-color: #202020;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+
+.accordion-button:not(.collapsed) {
+    color: #F60;
+    background-color: #222;
+}
+
+.modal-content{
+    background-color: #222;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background-color: #222; /* black */
+}
+
+main h2 {
+    color: #F60; /* orange */
+    font-size: 2.0em;
+    font-weight: 600;
+}
+
+main p {
+    color: #dddddd; 
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+/* cards */
+.card-title{
+    text-align: center;
+}
+h5{
+    font-size: 1.3em;
+}
+
+.card-text {
+    color: white !important;
+    text-align: center;
+}
+
+.dark-orange-card {
+    background-color: #ffffff00; 
+    color: white; /* Text Color */
+    border-color: #FF8C00 !important;
+}
+
+
+/* Form Styles */
+#feedback-form, #contact-form {
+    background-color: #333; 
+    color: #dddddd; /* grey */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #202020;
+    background-color: #444; 
+    color: #dddddd; /* grey */
+    font-weight: 400;
+}
+
+.btn-dark{
+    background-color: #444;
+}
+
+.btn-dark:active{
+    color: #FF8C00;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #202020 !important; /* black */
+    color: #dddddd; /* grey */
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+}
+
+/* Custom styles for carousel images */
+#carouselExample {
+        max-width: 800px; 
+        margin: auto; 
+    }
+
+    .carousel-item img {
+        object-fit: contain; 
+        height: 500px; 
+    }
+
+/* Style for carousel captions */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Size of the carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.134); /* Semi-transparent background for controls */
+    border-radius: 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+/* Image Styles */
+.img-thumbnail {
+    border-radius: 10px;
+}
+
+/* Responsive Utilities */
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Custom Link Style */
+.contact-link {
+    color: #F60; 
+}
+
+#colorButton {
+    transition: background-color 0.3s ease; /* Smooth transition for button */
+}
+
+/* STAR SYSTEM */
+.rating {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+}
+
+.rating input {
+	display: none;
+}
+
+.rating label {
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+	color: orange;
+}
+
+.rating input:checked ~ label {
+	color: orange;
+}
+
+header, footer, .navbar {
+    transition: background-color 0.3s ease; /* Smooth transition for header, footer, navbar */
+}
+
+.btn-dark {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for buttons */
+}

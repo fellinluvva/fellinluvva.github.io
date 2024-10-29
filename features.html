@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI.needmusic - Features</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <!-- Header -->
+    <header class="text-bg-dark text-white text-center pt-4">
+        <h1><b>AI.needmusic</b></h1>
+        <p>Your friend with good music taste</p>
+<!-- Current Date and BG -->
+        <p class="text-center"><span id="dateTime"></span></p>
+	<button id="colorButton" class="btn btn-dark mb-1">Change BG</button>
+
+    <!-- Login -->
+    <div id="login-section">
+        <input type="text" id="username-input" placeholder="Enter your username" />
+        <button onclick="login()" class="btn btn-dark mb-1">Login</button>
+    </div>
+    
+    <div id="welcome-section" style="display: none;">
+        <p>Hola, <span id="username-display"></span>!</p>
+        <button onclick="logout()" class="btn btn-dark mb-1">Logout</button>
+    </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarScroll">
+                <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+
+    <!-- Main -->
+    <main class="container py-5">
+        <h2 class="text-center mb-4"><b>Features of AI.needmusic</b></h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card dark-orange-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Personalized Recommendations</b></h5>
+                        <p class="card-text">Personalize music recommendation with AI algorithms.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card dark-orange-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Playlist Creation</b></h5>
+                        <p class="card-text">Create and share playlists easily with friends and family.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card dark-orange-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Vast Music Library</b></h5>
+                        <p class="card-text">Access a vast library of songs and artists from various genres.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card dark-orange-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Real-Time Collaboration</b></h5>
+                        <p class="card-text">Collaborate with friends in real-time on playlist creation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card dark-orange-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>User-Friendly Interface</b></h5>
+                        <p class="card-text">Enjoy a simple and intuitive user interface suitable for all ages.</p>
+                    </div>
+                </div>
+            </div>
+	<div class="col-lg-4 col-md-6 mb-4">
+                <div class="card dark-orange-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>will be updated soon</b></h5>
+                        <p class="card-text">blahblahblah bleh bleh bleh :3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+<!-- FAQ -->
+<div class="container my-4">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is AI.needmusic?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-white">
+                        AI.needmusic is an AI-powered recommendation system that suggests music based on your taste.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How does it work?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-white">
+                        It uses machine learning algorithms to analyze your listening habits and recommends songs accordingly.
+                    </div>
+                </div>
+            </div>
+	<div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How to make accordion?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-white">
+                        i have a lack of fantasy lmao.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <!-- BigFooter -->
+    <footer class="text-bg-dark text-white text-center py-3">
+        <p>AI.needmusic concept | Created by Azamat(@ssadkotikk) | © 2024</p>
+    </footer>
+
+    <!-- BS JSS popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
