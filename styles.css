@@ -1,8 +1,3 @@
-/*begin-commonstyles library*//*!
- * froala_editor v4.0.6 (https://www.froala.com/wysiwyg-editor)
- * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2021 Froala Labs
- */
 
 .fr-clearfix::after {
   clear: both;
@@ -95,27 +90,7 @@
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow: visible; }
-/*  .fr-view[dir="rtl"] blockquote {
-    border-left: none;
-    border-right: solid 2px #5E35B1;
-    margin-right: 0;
-    padding-right: 5px;
-    padding-left: 0; }
-    .fr-view[dir="rtl"] blockquote blockquote {
-      border-color: #00BCD4; }
-      .fr-view[dir="rtl"] blockquote blockquote blockquote {
-        border-color: #43A047; }
-  .fr-view blockquote {
-    border-left: solid 2px #5E35B1;
-    margin-left: 0;
-    padding-left: 5px;
-    color: #5E35B1; }
-    .fr-view blockquote blockquote {
-      border-color: #00BCD4;
-      color: #00BCD4; }
-      .fr-view blockquote blockquote blockquote {
-        border-color: #43A047;
-        color: #43A047; } */
+
   .fr-view span.fr-emoticon {
     font-weight: normal;
     font-family: "Apple Color Emoji","Segoe UI Emoji","NotoColorEmoji","Segoe UI Symbol","Android Emoji","EmojiSymbols";
@@ -290,9 +265,8 @@
   .fr-view button.fr-large, .fr-view input.fr-large, .fr-view textarea.fr-large {
     font-size: 24px; }
 
-/**
- * Image style.
- */
+
+
 a.fr-view.fr-strong {
   font-weight: 700; }
 a.fr-view.fr-green {
@@ -360,14 +334,14 @@ span.fr-img-caption.fr-view {
       float: right;
       margin: 5px 0 5px 5px;
       max-width: calc(100% - 5px); }
-/*end-commonstyles library*/@charset "UTF-8";
+@charset "UTF-8";
 .u-hidden-block {
   visibility: hidden!important;
 }
 .u-locked-block {
   pointer-events: none!important;
 }
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -560,20 +534,7 @@ ul,
 ol {
   padding-left: 20px;
 }
-/* Fade effect */
-/* Over effect */
-/* Slide effect */
-/* Over and Slide effect */
-/* Flip Left effect */
-/* Flip Right effect */
-/* Flip Top effect */
-/* Flip Bottom effect */
-/* Wobble Left effect */
-/* Wobble Right effect */
-/* Wobble top effect */
-/* Wobble bottom effect */
-/* Zoom and Rotate Effects */
-/* Utility */
+
 .u-over-slide {
   position: absolute;
   left: 0;
@@ -1026,9 +987,9 @@ ol {
   top: 0 !important;
 }
 .u-btn {
-  /*display: inline-block;*/
+  
   display: table;
-  /*TODO maye need another solution for negative marin*/
+ 
   cursor: pointer;
   color: inherit;
   font-size: inherit;
@@ -2442,7 +2403,7 @@ a {
   flex-shrink: 1;
   min-width: 0;
 }
-/* ********  spacing ******** */
+
 .u-form-horizontal.u-form-spacing-50 .u-form-group {
   margin-right: 50px;
 }
@@ -2596,7 +2557,7 @@ a {
 .u-form-horizontal.u-form-spacing-0 .u-form-group {
   margin-right: 0px;
 }
-/* ********  end of spacing ******** */
+
 .u-form-horizontal .u-form-group.u-form-submit {
   margin-right: 0;
 }
@@ -18102,7 +18063,7 @@ div.u-video,
   display: block;
   height: auto;
   margin-left: 0;
-  /* override horizontal spacing */
+ 
 }
 .u-enable-responsive .u-sidenav .u-nav-link {
   background: transparent;
@@ -19338,7 +19299,7 @@ aside .u-categories.u-categories-vertical ul {
   line-height: 1;
 }
 .u-categories.u-categories-vertical {
-  /* indent for all tree children excepts root */
+  
 }
 .u-categories.u-categories-vertical ul {
   display: table;
@@ -19456,12 +19417,7 @@ aside .u-categories.u-categories-vertical ul {
   -webkit-margin-before: 0;
   margin-right: 0 !important;
 }
-/*begin-commonstyles photoswipe*/
-/*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
-/*
-	Styles for basic PhotoSwipe functionality (sliding area, open/close transitions)
-*/
-/* pswp = photoswipe */
+
 .pswp {
   display: none;
   position: absolute;
@@ -19473,7 +19429,7 @@ aside .u-categories.u-categories-vertical ul {
   touch-action: none;
   z-index: 1500;
   -webkit-text-size-adjust: 100%;
-  /* create separate layer, to avoid paint on window.onscroll in webkit/blink */
+  
   -webkit-backface-visibility: hidden;
   outline: none;
 }
@@ -19483,39 +19439,36 @@ aside .u-categories.u-categories-vertical ul {
 .pswp img {
   max-width: none;
 }
-/* style is added when JS option showHideOpacity is set to true */
+
 .pswp--animate_opacity {
-  /* 0.001, because opacity:0 doesn't trigger Paint action, which causes lag at start of transition */
+  
   opacity: 0.001;
   will-change: opacity;
-  /* for open/close transition */
+  
   transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1);
 }
 .pswp--open {
   display: block;
 }
 .pswp--zoom-allowed .pswp__img {
-  /* autoprefixer: off */
+  
   cursor: -webkit-zoom-in;
   cursor: -moz-zoom-in;
   cursor: zoom-in;
 }
 .pswp--zoomed-in .pswp__img {
-  /* autoprefixer: off */
+ 
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
 }
 .pswp--dragging .pswp__img {
-  /* autoprefixer: off */
+  
   cursor: -webkit-grabbing;
   cursor: -moz-grabbing;
   cursor: grabbing;
 }
-/*
-	Background is added as a separate element.
-	As animating opacity is much faster than animating rgba() background-color.
-*/
+
 .pswp__bg {
   position: absolute;
   left: 0;
@@ -19545,7 +19498,7 @@ aside .u-categories.u-categories-vertical ul {
   top: 0;
   bottom: 0;
 }
-/* Prevent selection and tap highlights */
+
 .pswp__container,
 .pswp__img {
   -webkit-user-select: none;
@@ -19558,12 +19511,12 @@ aside .u-categories.u-categories-vertical ul {
   position: absolute;
   width: 100%;
   transform-origin: left top;
-  /* for open/close transition */
+  
   transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
 }
 .pswp__bg {
   will-change: opacity;
-  /* for open/close transition */
+  
   transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1);
 }
 .pswp--animated-in .pswp__bg,
@@ -19589,17 +19542,11 @@ aside .u-categories.u-categories-vertical ul {
   top: 0;
   left: 0;
 }
-/*
-	stretched thumbnail or div placeholder element (see below)
-	style is added to avoid flickering in webkit/blink when layers overlap
-*/
+
 .pswp__img--placeholder {
   -webkit-backface-visibility: hidden;
 }
-/*
-	div element that matches size of large image
-	large image loads on top of it
-*/
+
 .pswp__img--placeholder--blank {
   background: #222;
 }
@@ -19609,10 +19556,7 @@ aside .u-categories.u-categories-vertical ul {
   left: 0;
   top: 0;
 }
-/*
-	Error message appears when image is not loaded
-	(JS option errorMsg controls markup)
-*/
+
 .pswp__error-msg {
   position: absolute;
   left: 0;
@@ -19664,28 +19608,7 @@ aside .u-categories.u-categories-vertical ul {
 .pswp__previews::-webkit-scrollbar {
   display: none;
 }
-/* end previews  */
-/*end-commonstyles photoswipe*/
-/*begin-commonstyles photoswipe-default*/
-/*! PhotoSwipe Default UI CSS by Dmitry Semenov | photoswipe.com | MIT license */
-/*
 
-	Contents:
-
-	1. Buttons
-	2. Share modal and links
-	3. Index indicator ("1 of X" counter)
-	4. Caption
-	5. Loading indicator
-	6. Additional styles (root element, top bar, idle state, hidden state, etc.)
-
-*/
-/*
-
-	1. Buttons
-
- */
-/* <button> css reset */
 .pswp__button {
   width: 44px;
   height: 44px;
@@ -19715,7 +19638,7 @@ aside .u-categories.u-categories-vertical ul {
   padding: 0;
   border: 0;
 }
-/* pswp__ui--over-close class it added when mouse is over element that should close gallery */
+
 .pswp__ui--over-close .pswp__button--close {
   opacity: 1;
 }
@@ -19728,7 +19651,7 @@ aside .u-categories.u-categories-vertical ul {
   height: 44px;
 }
 @media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (min-resolution: 105dpi), (min-resolution: 1.1dppx) {
-  /* Serve SVG sprite if browser supports SVG and resolution is more than 105dpi */
+ 
   .pswp--svg .pswp__button,
   .pswp--svg .pswp__button--arrow--left:before,
   .pswp--svg .pswp__button--arrow--right:before {
@@ -19764,15 +19687,12 @@ aside .u-categories.u-categories-vertical ul {
 .pswp--zoomed-in .pswp__button--zoom {
   background-position: -132px 0;
 }
-/* no arrows on touch screens */
+
 .pswp--touch .pswp__button--arrow--left,
 .pswp--touch .pswp__button--arrow--right {
   visibility: hidden;
 }
-/*
-	Arrow buttons hit area
-	(icon is added to :before pseudo-element)
-*/
+
 .pswp__button--arrow--left,
 .pswp__button--arrow--right {
   background: none;
@@ -19805,11 +19725,7 @@ aside .u-categories.u-categories-vertical ul {
   right: 6px;
   background-position: -94px -44px;
 }
-/*
 
-	2. Share modal/popup and links
-
- */
 .pswp__counter,
 .pswp__share-modal {
   -webkit-user-select: none;
@@ -44373,6 +44289,5 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 }
 
- /*begin-variables base-font-size*/ 
+ 
  html { font-size: 16px; }
- /*end-variables base-font-size*/
