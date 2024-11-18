@@ -1,3 +1,35 @@
+/* Light Mode (Default Theme) */
+body.light-mode .u-white {
+    background-color: #ffffff !important; /* Light background */
+    color: #000000 !important;          /* Dark text */
+}
+
+/* Dark Mode */
+body.dark-mode .u-white {
+    background-color: #121212 !important; /* Dark background */
+    color: #e0e0e0 !important;           /* Light text */
+}
+
+/* Transition for Smooth Effect */
+body .u-white {
+    transition: background-color 0.3s, color 0.3s;
+}
+/* Button styling */
+.theme-button {
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.theme-button:hover {
+    background-color: darkgray;
+}
 
 .fr-clearfix::after {
   clear: both;
