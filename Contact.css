@@ -1,3 +1,18 @@
+ /* Styling the search container */
+
+
+        label, select, input {
+            display: block;           /* Make elements stack vertically */
+            margin: 10px auto;        /* Add spacing between elements */
+            width: 100%;              /* Full width for inputs */
+            max-width: 300px;         /* Limit maximum width */
+        }
+
+        #music-list {
+            margin-top: 20px;         /* Add spacing above the results */
+            text-align: center;         /* Align results to the left */
+        }
+
 //base styles
 
 * {

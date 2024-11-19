@@ -10,132 +10,61 @@ const newValueInput = document.getElementById('newValueInput');
 const confirmPasswordInput = document.getElementById('confirmPasswordInput');
 
 
-// Функция для выхода из аккаунта
-function logout() {
-    localStorage.removeItem('user');
-    window.location.href = 'login.html';
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const loginLink = document.getElementById("login-link");
+    const signupLink = document.getElementById("signup-link");
+    const logoutLink = document.getElementById("logout-link");
+    const profileLink = document.getElementById("profile-link");
 
-// Обработчик события для кнопки "Выйти"
-if (logoutButton) {
-    logoutButton.addEventListener('click', logout);
-}
+    // Получаем данные пользователя из localStorage
+    const storedUsername = localStorage.getItem("username");
+    const storedEmail = localStorage.getItem("email");
+    const storedPassword = localStorage.getItem("password");
 
-// Обработчик события для ссылки "Профиль"
-if (profileLink) {
-    profileLink.addEventListener('click', () => {
-        window.location.href = 'profile.html';
-    });
-}
-
-// --- Код для аутентификации ---
-// Функция для валидации формы авторизации
-function validateLoginForm() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-        alert('Пожалуйста, введите корректный email.');
-        return false;
-    }
-
-    if (password.length < 6) {
-        alert('Пароль должен быть не менее 6 символов.');
-        return false;
-    }
-
-    const passwordPattern = /^(?=.*[0-9])(?=.*[!@#%^&*])(?=.*[a-zA-Z]).{6,}$/;
-    if (!passwordPattern.test(password)) {
-        alert('Пароль должен содержать хотя бы одну цифру и один спец. символ.');
-        return false;
-    }
-
-    return true;
-}
-
-// Обработчик отправки формы авторизации (login.html)
-const loginForm = document.getElementById('loginForm');
-if (loginForm) {
-    loginForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        if (validateLoginForm()) {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const name = document.getElementById('name').value; 
-
-            // Имитация аутентификации (локальное хранилище)
-            const user = {email, password, name}; 
-            localStorage.setItem('user', JSON.stringify(user));
-
-            window.location.href = 'index.html'; 
-        }
-    });
-}
-
-// --- Код для профиля ---
-// Функция для отображения данных профиля
-function displayProfileData() {
-    const profileName = document.getElementById('profileName');
-    const profileEmail = document.getElementById('profileEmail');
-    const user = JSON.parse(localStorage.getItem('user'));
-
-    if (user) {
-        profileName.textContent = user.name; 
-        profileEmail.textContent = user.email;
+    // Обновляем навигацию на основе статуса входа
+    if (storedUsername) {
+        loginLink.classList.add("d-none");
+        signupLink.classList.add("d-none");
+        logoutLink.classList.remove("d-none");
+        profileLink.classList.remove("d-none");
     } else {
-        window.location.href = 'login.html';
+        loginLink.classList.remove("d-none");
+        signupLink.classList.remove("d-none");
+        logoutLink.classList.add("d-none");
+        profileLink.classList.add("d-none");
     }
-}
 
-// Обработчик отправки формы профиля (profile.html)
-const profileForm = document.getElementById('profileForm');
-if (profileForm) {
-    profileForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+    // Обработка формы входа
+    const loginForm = document.getElementById("login-form");
+    if (loginForm) {
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const usernameInput = document.getElementById("username").value;
+            const passwordInput = document.getElementById("password").value;
 
-        const selectedChange = changeSelect.value; 
-        const newValue = document.getElementById('newValue').value;
-
-        // Получаем текущие данные пользователя
-        const user = JSON.parse(localStorage.getItem('user'));
-
-        if (selectedChange === 'password') {
-            const confirmPassword = document.getElementById('confirmPassword').value;
-            if (newValue !== confirmPassword) {
-                alert('Пароли не совпадают!');
-                return;
+            // Проверяем введенные данные с сохраненными
+            if (usernameInput === storedUsername && passwordInput === storedPassword) {
+                document.getElementById("login-message").innerText = 'Login successful! Redirecting...';
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1000);
+            } else {
+                document.getElementById("login-message").innerText = 'Invalid username or password.';
             }
-            user.password = newValue; 
-        } else if (selectedChange === 'name') {
-            user.name = newValue;
-        } else if (selectedChange === 'email') {
-            user.email = newValue;
-        }
+        });
+    }
 
-        localStorage.setItem('user', JSON.stringify(user));
-        displayProfileData();
-    });
+    // Обработка выхода из системы
+    if (logoutLink) {
+        logoutLink.addEventListener("click", function () {
+            localStorage.removeItem("username");
+            localStorage.removeItem("email");
+            localStorage.removeItem("password");
 
-    // Обработчик изменения выбора в select
-    changeSelect.addEventListener('change', () => {
-        const selectedChange = changeSelect.value;
-        if (selectedChange === 'password') {
-            confirmPasswordInput.style.display = 'block'; 
-            newValueInput.querySelector('label').textContent = 'Новый пароль:';
-            newValueInput.querySelector('input').type = 'password';
-        } else {
-            confirmPasswordInput.style.display = 'none'; 
-            newValueInput.querySelector('label').textContent = 'Новое значение:';
-            newValueInput.querySelector('input').type = 'text';
-        }
-    });
-}
-
-// Вызов функции при загрузке страницы profile.html
-if (window.location.pathname.endsWith('profile.html')) {
-    displayProfileData();
-}
+            window.location.href = 'index.html';
+        });
+    }
+});
 
 // DATE AND TIME
 function displayDateTime() {

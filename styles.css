@@ -1,3 +1,7 @@
+.d-none {
+  display: none !important;
+}
+
 /* Light Mode (Default Theme) */
 body.light-mode .u-white {
     background-color: #ffffff !important; /* Light background */
@@ -416,6 +420,9 @@ template,
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+
+    color: #F60;
+    text-decoration: auto;
 }
 a:active,
 a:hover {
@@ -44217,7 +44224,9 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-header .u-login-1 {
   font-weight: 700;
-  margin: -32px 132px 35px auto;
+  margin: -37px 125px 30px auto;
+color: #F60;
+    text-decoration: auto;
 }
 @media (max-width: 1199px) {
   .u-header .u-text-2 {
@@ -44230,21 +44239,19 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 
   .u-header .u-login-1 {
-    margin-top: -32px;
+    margin-top: -35px;
     margin-right: 132px;
-    margin-bottom: 60px;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1008px) {
   .u-header .u-menu-1 {
     margin-top: -39px;
     margin-right: 0;
   }
 
   .u-header .u-login-1 {
-    margin-top: -31px;
+    margin-top: -35px;
     margin-right: 122px;
-    margin-bottom: 35px;
   }
 }
 @media (max-width: 767px) {
@@ -44253,9 +44260,8 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 
   .u-header .u-login-1 {
-    margin-top: -28px;
+    margin-top: -35px;
     margin-right: 68px;
-    margin-bottom: 36px;
   }
 }
 @media (max-width: 575px) {
@@ -44279,9 +44285,8 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 
   .u-header .u-login-1 {
-    margin-top: -29px;
+    margin-top: -35px;
     margin-right: 70px;
-    margin-bottom: 37px;
   }
 }
  .u-footer {
