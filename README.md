@@ -4,11 +4,11 @@ This project demonstrates a web application that uses local storage to save user
 - Carousel
 - Accordion
 - Timestamp
-- User Authentication
+- User Authentication: TBA
 - Light/Dark Mode
-- Audio search
+- Audio**(Removed)**
 - Toggler(burger)
-- last.fm API
+- etc
 
 User preferences are saved in the browser's local storage, ensuring data persistence across page reloads or browser sessions.
 
