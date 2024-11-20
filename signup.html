@@ -33,11 +33,7 @@
                 <input type="email" class="form-control" id="email" required>
                 <small id="emailHelp" class="text-danger" style="display: none;">Please enter a valid email address.</small>
             </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="text" class="form-control" id="phone" placeholder="+7" required>
-                <small id="phoneHelp" class="text-danger" style="display: none;">Enter a valid Kazakhstani phone number.</small>
-            </div>
+           
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" required>
@@ -69,7 +65,7 @@
 
                 const username = document.getElementById("username").value;
                 const email = emailInput.value;
-                const phone = phoneInput.value;
+                
                 const password = passwordInput.value;
 
                 let isValid = true;
@@ -81,12 +77,7 @@
                     emailHelp.style.display = "none";
                 }
 
-                if (!validatePhone(phone)) {
-                    phoneHelp.style.display = "block";
-                    isValid = false;
-                } else {
-                    phoneHelp.style.display = "none";
-                }
+               
 
                 if (!validatePassword(password)) {
                     passwordHelp.style.display = "block";
@@ -98,7 +89,7 @@
                 if (isValid) {
                     localStorage.setItem("username", username);
                     localStorage.setItem("email", email);
-                    localStorage.setItem("phone", phone);
+                   
                     localStorage.setItem("password", password);
 
                     document.getElementById("signup-message").innerText = "Sign up successful! Redirecting to login...";
@@ -113,10 +104,7 @@
                 return emailPattern.test(email);
             }
 
-            function validatePhone(phone) {
-                const phonePattern = /^\+7\d{10}$/;
-                return phonePattern.test(phone);
-            }
+          
 
             function validatePassword(password) {
                 const minLength = 8;
