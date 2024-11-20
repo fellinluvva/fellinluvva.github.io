@@ -49,16 +49,12 @@
             const signupForm = document.getElementById("signup-form");
             const passwordInput = document.getElementById("password");
             const emailInput = document.getElementById("email");
-            const phoneInput = document.getElementById("phone");
+           
             const passwordHelp = document.getElementById("passwordHelp");
             const emailHelp = document.getElementById("emailHelp");
             const phoneHelp = document.getElementById("phoneHelp");
             
-            phoneInput.addEventListener("input", function () {
-                if (!phoneInput.value.startsWith("+7")) {
-                    phoneInput.value = "+7";
-                }
-            });
+           
             
             signupForm.addEventListener("submit", function (event) {
                 event.preventDefault();
